@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+        <form id="resume-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website">
+
+            <label for="linkedin">LinkedIn:</label>
+            <input type="url" id="linkedin" name="linkedin">
+
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <label for="summary">Summary:</label>
+            <textarea id="summary" name="summary" required></textarea>
+
+            <label for="skills">Skills (comma separated):</label>
+            <input type="text" id="skills" name="skills" required>
+
+            <label for="experience">Experience:</label>
+            <textarea id="experience" name="experience" required></textarea>
+
+            <label for="education">Education:</label>
+            <textarea id="education" name="education" required></textarea>
+
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </form>
+        <div id="resume-output" class="resume-output"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
